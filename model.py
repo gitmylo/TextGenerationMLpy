@@ -20,6 +20,9 @@ class textModel:
         print('total chars:', len(self.chars))
         self.char_indices = dict((c, i) for i, c in enumerate(self.chars))
         self.indices_char = dict((i, c) for i, c in enumerate(self.chars))
+        config = tf.ConfigProto()
+        config.gpu_options.allow_growth = True
+        sess = tf.Session(config=config)
 
     def setVars(self, maxlenNew):
         self.maxlen = maxlenNew
