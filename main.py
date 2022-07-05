@@ -50,7 +50,7 @@ while mode == -1:
 if mode == 0:
 
     def handler(signum, frame):
-        print("Quitting, Saving model...")
+        print("\nQuitting, Saving model...")
         model.save_weights(modelPath + "/saved/data")
         print("Model saved. Exiting...")
         exit(0)
